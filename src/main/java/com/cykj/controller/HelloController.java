@@ -46,7 +46,7 @@ public class HelloController {
         if (register) {
             return "200";
         } else {
-            return "100";
+            return "1000";
         }
     }
 
