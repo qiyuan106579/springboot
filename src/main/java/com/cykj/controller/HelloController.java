@@ -29,7 +29,7 @@ public class HelloController {
     @ResponseBody
     public String getLogin(User user) {
         System.out.println("123456-----------------------------------------------------------");
-        System.out.println("账号：" + user.getUserName() + "\n密码：" + user.getPassword());
+        System.out.println("登录：" + "\n" + "账号：" + user.getUserName() + "\n密码：" + user.getPassword());
         User login = helloService.login(user.getUserName(), user.getPassword());
         if (login != null) {
             return "200";
@@ -46,7 +46,7 @@ public class HelloController {
         if (register) {
             return "200";
         } else {
-            return "1000";
+            return "100";
         }
     }
 
