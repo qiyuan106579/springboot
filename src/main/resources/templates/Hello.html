@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<h1>Hello SpringBoot!</h1>
+<form action="getHello" method="post">
+    <p>
+        <label>账户：</label>
+        <input type="text" name="userName">
+    </p>
+    <p>
+        <label>密码：</label>
+        <input type="password" name="password">
+    </p>
+    <p><input type="submit"></p>
+</form>
+<input type="button" id="testBtn" value="ajax提交">
+</body>
+
+<script type="text/javascript">
+    var people = {
+        userName: "123",
+        password: "123"
+    }
+    $("#testBtn").click(function () {
+        $.ajax({
+            url: 'getHello4',
+            data: JSON.stringify(people),
+            contentType: "application/json; charset=utf-8",
+            type: 'POST',
+            dataType: 'json',
+            success: function (reqs) {
+                console.log(reqs)
+                alert(reqs)
+            }
+
+        })
+    });
+</script>
+
+</html>
