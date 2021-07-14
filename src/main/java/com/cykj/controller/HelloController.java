@@ -28,7 +28,7 @@ public class HelloController {
     @RequestMapping("/getHello")
     @ResponseBody
     public String getLogin(User user) {
-        System.out.println("-----------------------------------------------------------");
+        System.out.println("123-----------------------------------------------------------");
         System.out.println("账号：" + user.getUserName() + "\n密码：" + user.getPassword());
         User login = helloService.login(user.getUserName(), user.getPassword());
         if (login != null) {
